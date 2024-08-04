@@ -59,6 +59,14 @@ void calculateFunctions(basicCalculator& calculator, int choice, double a, doubl
 		result = calculator.sin(a * M_PI / 180.0);// represents pie m_pi
 		cout << "\t\t" << "Sin(" << a << " degrees) = " << result << endl;
 		break;
+	case 6:
+		result = calculator.cos(a * M_PI / 180.0);// represents pie m_pi
+		cout << "\t\t" << "Cos(" << a << " degrees) = " << result << endl;
+		break;
+	case 7:
+		result = calculator.tan(a * M_PI / 180.0);// represents pie m_pi
+		cout << "\t\t" << "tan(" << a << " degrees) = " << result << endl;
+		break;
 	}
 }
 
@@ -76,6 +84,8 @@ int main() {
 		cout << "\t\t" << "3.multiplication " << endl;
 		cout << "\t\t" << "4.division " << endl;
 		cout << "\t\t" << "5.sin " << endl;
+		cout << "\t\t" << "6.cos " << endl;
+		cout << "\t\t" << "7.tan " << endl;
 		cout << "\t\t" << "0.exit " << endl;
 		cout << "\t\t" << "enter your choice: ";
 

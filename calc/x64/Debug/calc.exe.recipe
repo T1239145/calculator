@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\toshi\Desktop\computer science\summer projects\calc\x64\Debug\calc.exe</FullPath>
+      <FullPath>C:\Users\toshi\source\repos\calculator\x64\Debug\calc.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
