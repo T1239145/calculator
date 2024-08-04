@@ -29,9 +29,9 @@ struct basicCalculator {
 	double division(double a, double b) { return a / b; }
 
 	//trig functions   if not using namespace it would  be return std:sin
-	double sin(double angle) { return sin(angle); }
-	double cos(double angle) { return cos(angle); }
-	double tan(double angle) { return tan(angle); }
+	double sin(double angle) { return std::sin(angle); }
+	double cos(double angle) { return std::cos(angle); }
+	double tan(double angle) { return std::tan(angle); }
 
 };
 
@@ -56,8 +56,8 @@ void calculateFunctions(basicCalculator& calculator, int choice, double a, doubl
 		cout << "\t\t" << " answer is: " << result << endl;
 		break;
 	case 5://convert degree to radian
-		result = calculator.sin(a * M_PI / 180.0);
-		cout << "\t\t" << " answer is: " << result << endl;
+		result = calculator.sin(a * M_PI / 180.0);// represents pie m_pi
+		cout << "\t\t" << "Sin(" << a << " degrees) = " << result << endl;
 		break;
 	}
 }
@@ -78,6 +78,7 @@ int main() {
 		cout << "\t\t" << "5.sin " << endl;
 		cout << "\t\t" << "0.exit " << endl;
 		cout << "\t\t" << "enter your choice: ";
+
 		cin >> input;
 
 		if (input == 0) {
@@ -86,8 +87,13 @@ int main() {
 		else {
 			cout << "\t\t" << " enter first number: ";
 			cin >> num1;
-			cout << "\t\t" << " enter second number: ";
-			cin >> num2;
+			if (input != 5 && input != 6 && input != 7) { // For non-trig functions
+				cout << "\t\t" << "Enter second number: ";
+				cin >> num2;
+			}
+			else {
+				num2 = 0; // Dummy value for trig functions
+			}
 			calculateFunctions(calculator, input, num1, num2);
 		}
 
